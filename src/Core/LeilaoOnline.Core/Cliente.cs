@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace LeilaoOnline.Core
 {
-    public class Interessada
+    public class Cliente
     {
-        public string Nome { get; set; }
-        public Leilao Leilao { get; set; }
+        public string Nome { get; }
+        public Leilao Leilao { get; }
 
-        public Interessada(string nome, Leilao leilao)
+        public Cliente(string nome, Leilao leilao)
         {
             Nome = nome;
             Leilao = leilao;
