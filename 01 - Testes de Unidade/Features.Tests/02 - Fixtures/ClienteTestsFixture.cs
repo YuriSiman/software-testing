@@ -1,7 +1,7 @@
 ﻿using Features.Clientes;
 using System;
 
-namespace Features.Tests._02___Fixtures
+namespace Features.Tests
 {
     public class ClienteTestsFixture : IDisposable
     {

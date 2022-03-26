@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace Features.Tests._02___Fixtures
+namespace Features.Tests
 {
     [Collection(nameof(ClienteCollection))]
     public class ClienteValidacaoTests
