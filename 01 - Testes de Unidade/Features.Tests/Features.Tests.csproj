@@ -10,6 +10,7 @@
   <ItemGroup>
     <PackageReference Include="Bogus" Version="34.0.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
+    <PackageReference Include="Moq" Version="4.17.2" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -26,7 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="05 - Mock\" />
     <Folder Include="06 - AutoMock\" />
     <Folder Include="07 - FluentAssertions\" />
     <Folder Include="08 - Skip\" />
