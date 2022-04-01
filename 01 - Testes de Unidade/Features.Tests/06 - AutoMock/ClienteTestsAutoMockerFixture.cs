@@ -1,14 +1,18 @@
 ﻿using Bogus;
 using Bogus.DataSets;
 using Features.Clientes;
+using Moq.AutoMock;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Features.Tests
+namespace Features.Tests._06___AutoMock
 {
-    public class ClienteTestsBogusFixture : IDisposable
+    public class ClienteTestsAutoMockerFixture : IDisposable
     {
+        public ClienteService ClienteService;
+        public AutoMocker Mocker;
+
         public Cliente GerarClienteValido()
         {
             return GerarClientes(1, true).FirstOrDefault();
@@ -37,7 +41,7 @@ namespace Features.Tests
                     "",
                     ativo,
                     DateTime.Now))
-                .RuleFor(c => c.Email, (f,c) => 
+                .RuleFor(c => c.Email, (f, c) =>
                     f.Internet.Email(c.Nome.ToLower(), c.Sobrenome.ToLower()));
 
             return clientes.Generate(quantidade);
@@ -60,6 +64,15 @@ namespace Features.Tests
             return cliente;
         }
 
-        public void Dispose() { }
+        public ClienteService ObterClienteService()
+        {
+            Mocker = new AutoMocker();
+            ClienteService = Mocker.CreateInstance<ClienteService>();
+            return ClienteService;
+        }
+
+        public void Dispose()
+        {
+        }
     }
 }
