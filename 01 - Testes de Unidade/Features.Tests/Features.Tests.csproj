@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Bogus" Version="34.0.1" />
+    <PackageReference Include="FluentAssertions" Version="6.5.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
     <PackageReference Include="Moq" Version="4.17.2" />
     <PackageReference Include="moq.automock" Version="3.3.0" />
@@ -28,7 +29,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="07 - FluentAssertions\" />
     <Folder Include="08 - Skip\" />
     <Folder Include="09 - Code Coverage\" />
   </ItemGroup>

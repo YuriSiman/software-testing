@@ -1,6 +1,6 @@
 ﻿using Xunit;
 
-namespace Features.Tests._06___AutoMock
+namespace Features.Tests
 {
     [CollectionDefinition(nameof(ClienteAutoMockerCollection))]
     public class ClienteAutoMockerCollection : ICollectionFixture<ClienteTestsAutoMockerFixture> { }

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading;
 using Xunit;
 
-namespace Features.Tests._06___AutoMock
+namespace Features.Tests
 {
     [Collection(nameof(ClienteBogusCollection))]
     public class ClienteServiceAutoMockerTests
