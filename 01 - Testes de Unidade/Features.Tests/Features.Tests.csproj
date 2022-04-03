@@ -29,7 +29,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="08 - Skip\" />
     <Folder Include="09 - Code Coverage\" />
   </ItemGroup>
 

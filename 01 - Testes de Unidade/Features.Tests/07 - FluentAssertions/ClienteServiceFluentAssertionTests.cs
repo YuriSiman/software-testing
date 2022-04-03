@@ -3,7 +3,6 @@ using FluentAssertions;
 using FluentAssertions.Extensions;
 using MediatR;
 using Moq;
-using System.Linq;
 using System.Threading;
 using Xunit;
 
