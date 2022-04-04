@@ -51,6 +51,102 @@ namespace Features.Tests
             _clienteTestsAutoMockerFixture.Mocker.GetMock<IMediator>().Verify(m => m.Publish(It.IsAny<INotification>(), CancellationToken.None), Times.Never);
         }
 
+        [Fact(DisplayName = "Atualizar Cliente com Sucesso")]
+        [Trait("Categoria", "Cliente Service AutoMock Fixture Tests")]
+        public void ClienteService_Atualizar_DeveAtualizarComSucesso()
+        {
+            // Arrange
+            var cliente = _clienteTestsAutoMockerFixture.GerarClienteValido();
+
+            // Act
+            _clienteService.Atualizar(cliente);
+
+            // Assert
+            Assert.True(cliente.EhValido());
+            _clienteTestsAutoMockerFixture.Mocker.GetMock<IClienteRepository>().Verify(r => r.Atualizar(cliente), Times.Once);
+            _clienteTestsAutoMockerFixture.Mocker.GetMock<IMediator>().Verify(m => m.Publish(It.IsAny<INotification>(), CancellationToken.None), Times.Once);
+        }
+
+        [Fact(DisplayName = "Atualizar Cliente com Falha")]
+        [Trait("Categoria", "Cliente Service AutoMock Fixture Tests")]
+        public void ClienteService_Atualizar_DeveAtualizarComFalha()
+        {
+            // Arrange
+            var cliente = _clienteTestsAutoMockerFixture.GerarClienteInvalido();
+
+            // Act
+            _clienteService.Atualizar(cliente);
+
+            // Assert
+            Assert.False(cliente.EhValido());
+            _clienteTestsAutoMockerFixture.Mocker.GetMock<IClienteRepository>().Verify(r => r.Atualizar(cliente), Times.Never);
+            _clienteTestsAutoMockerFixture.Mocker.GetMock<IMediator>().Verify(m => m.Publish(It.IsAny<INotification>(), CancellationToken.None), Times.Never);
+        }
+
+        [Fact(DisplayName = "Inativar Cliente com Sucesso")]
+        [Trait("Categoria", "Cliente Service AutoMock Fixture Tests")]
+        public void ClienteService_Inativar_DeveInativarComSucesso()
+        {
+            // Arrange
+            var cliente = _clienteTestsAutoMockerFixture.GerarClienteValido();
+
+            // Act
+            _clienteService.Inativar(cliente);
+
+            // Assert
+            Assert.True(cliente.EhValido());
+            Assert.False(cliente.Ativo);
+            _clienteTestsAutoMockerFixture.Mocker.GetMock<IClienteRepository>().Verify(r => r.Atualizar(cliente), Times.Once);
+            _clienteTestsAutoMockerFixture.Mocker.GetMock<IMediator>().Verify(m => m.Publish(It.IsAny<INotification>(), CancellationToken.None), Times.Once);
+        }
+
+        [Fact(DisplayName = "Inativar Cliente com Falha")]
+        [Trait("Categoria", "Cliente Service AutoMock Fixture Tests")]
+        public void ClienteService_Inativar_DeveInativarComFalha()
+        {
+            // Arrange
+            var cliente = _clienteTestsAutoMockerFixture.GerarClienteInvalido();
+
+            // Act
+            _clienteService.Inativar(cliente);
+
+            // Assert
+            Assert.False(cliente.EhValido());
+            Assert.False(cliente.Ativo);
+            _clienteTestsAutoMockerFixture.Mocker.GetMock<IClienteRepository>().Verify(r => r.Atualizar(cliente), Times.Never);
+            _clienteTestsAutoMockerFixture.Mocker.GetMock<IMediator>().Verify(m => m.Publish(It.IsAny<INotification>(), CancellationToken.None), Times.Never);
+        }
+
+        [Fact(DisplayName = "Remover Cliente com Sucesso")]
+        [Trait("Categoria", "Cliente Service AutoMock Fixture Tests")]
+        public void ClienteService_Remover_DeveRemoverComSucesso()
+        {
+            // Arrange
+            var cliente = _clienteTestsAutoMockerFixture.GerarClienteValido();
+
+            // Act
+            _clienteService.Remover(cliente);
+
+            // Assert
+            _clienteTestsAutoMockerFixture.Mocker.GetMock<IClienteRepository>().Verify(r => r.Remover(cliente.Id), Times.Once);
+            _clienteTestsAutoMockerFixture.Mocker.GetMock<IMediator>().Verify(m => m.Publish(It.IsAny<INotification>(), CancellationToken.None), Times.Once);
+        }
+
+        [Fact(DisplayName = "Remover Cliente com Falha")]
+        [Trait("Categoria", "Cliente Service AutoMock Fixture Tests")]
+        public void ClienteService_Remover_DeveRemoverComFalha()
+        {
+            // Arrange
+            var cliente = _clienteTestsAutoMockerFixture.GerarClienteInvalido();
+
+            // Act
+            _clienteService.Remover(cliente);
+
+            // Assert
+            _clienteTestsAutoMockerFixture.Mocker.GetMock<IClienteRepository>().Verify(r => r.Remover(cliente.Id), Times.Once);
+            _clienteTestsAutoMockerFixture.Mocker.GetMock<IMediator>().Verify(m => m.Publish(It.IsAny<INotification>(), CancellationToken.None), Times.Once);
+        }
+
         [Fact(DisplayName = "Obter Clientes Ativos")]
         [Trait("Categoria", "Cliente Service AutoMock Fixture Tests")]
         public void ClienteService_ObterTotosAtivos_DeveRetornarApenasClientesAtivos()

@@ -26,9 +26,9 @@ namespace Features.Clientes
             DataCadastro = dataCadastro;
         }
 
-        public string NomeCompleto()
+        public bool NomeCompleto()
         {
-            return $"{Nome} {Sobrenome}";
+            return !string.IsNullOrEmpty(Nome) && !string.IsNullOrEmpty(Sobrenome);
         }
 
         public bool EhEspecial()
