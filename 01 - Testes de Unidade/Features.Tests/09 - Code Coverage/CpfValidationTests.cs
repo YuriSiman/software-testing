@@ -7,7 +7,7 @@ namespace Features.Tests
     public class CpfValidationTests
     {
         [Theory(DisplayName = "CPF Válidos")]
-        [Trait("Categoria", "CPF Validation Tests")]
+        [Trait("01 - Testes de Unidade", "CPF Validation Tests")]
         [InlineData("15231766607")]
         [InlineData("78246847333")]
         [InlineData("64184957307")]
@@ -26,7 +26,7 @@ namespace Features.Tests
         }
 
         [Theory(DisplayName = "CPF Inválidos")]
-        [Trait("Categoria", "CPF Validation Tests")]
+        [Trait("01 - Testes de Unidade", "CPF Validation Tests")]
         [InlineData("15231766607123")]
         [InlineData("12345678945")]
         [InlineData("12358549874")]

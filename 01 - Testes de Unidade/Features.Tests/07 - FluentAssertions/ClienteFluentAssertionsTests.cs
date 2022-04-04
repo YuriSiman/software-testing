@@ -17,7 +17,7 @@ namespace Features.Tests
         }
 
         [Fact(DisplayName = "Novo Cliente Válido")]
-        [Trait("Categoria", "Cliente Fluent Assertion Testes")]
+        [Trait("01 - Testes de Unidade", "Cliente Fluent Assertion Testes")]
         public void Cliente_NovoCliente_DeveEstarValido()
         {
             // Arrange
@@ -36,7 +36,7 @@ namespace Features.Tests
         }
 
         [Fact(DisplayName = "Novo Cliente Inválido")]
-        [Trait("Categoria", "Cliente Fluent Assertion Testes")]
+        [Trait("01 - Testes de Unidade", "Cliente Fluent Assertion Testes")]
         public void Cliente_NovoCliente_DeveEstarInvalido()
         {
             // Arrange

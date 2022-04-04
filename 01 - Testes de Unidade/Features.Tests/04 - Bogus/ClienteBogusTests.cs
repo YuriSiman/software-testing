@@ -13,7 +13,7 @@ namespace Features.Tests
         }
 
         [Fact(DisplayName = "Novo Cliente Válido")]
-        [Trait("Categoria", "Cliente Bogus Tests")]
+        [Trait("01 - Testes de Unidade", "Cliente Bogus Tests")]
         public void Cliente_EhValido_DeveEstarValido()
         {
             // Arrange
@@ -28,7 +28,7 @@ namespace Features.Tests
         }
 
         [Fact(DisplayName = "Novo Cliente Inválido")]
-        [Trait("Categoria", "Cliente Bogus Tests")]
+        [Trait("01 - Testes de Unidade", "Cliente Bogus Tests")]
         public void Cliente_EhValido_DeveEstarInvalido()
         {
             // Arrange
@@ -43,7 +43,7 @@ namespace Features.Tests
         }
 
         [Fact(DisplayName = "Novo Cliente é Especial")]
-        [Trait("Categoria", "Cliente Bogus Tests")]
+        [Trait("01 - Testes de Unidade", "Cliente Bogus Tests")]
         public void Cliente_EhEspecial_DeveSerEspecial()
         {
             // Arrange
@@ -57,7 +57,7 @@ namespace Features.Tests
         }
 
         [Fact(DisplayName = "Novo Cliente Não é Especial")]
-        [Trait("Categoria", "Cliente Bogus Tests")]
+        [Trait("01 - Testes de Unidade", "Cliente Bogus Tests")]
         public void Cliente_EhEspecial_NaoDeveSerEspecial()
         {
             // Arrange
@@ -71,7 +71,7 @@ namespace Features.Tests
         }
 
         [Fact(DisplayName = "Cliente Inativado")]
-        [Trait("Categoria", "Cliente Bogus Tests")]
+        [Trait("01 - Testes de Unidade", "Cliente Bogus Tests")]
         public void Cliente_Inativar_DeveSerInativado()
         {
             // Arrange
@@ -85,7 +85,7 @@ namespace Features.Tests
         }
 
         [Fact(DisplayName = "Cliente Possui Nome Completo")]
-        [Trait("Categoria", "Cliente Bogus Tests")]
+        [Trait("01 - Testes de Unidade", "Cliente Bogus Tests")]
         public void Cliente_NomeCompleto_DevePossuirNomeCompleto()
         {
             // Arrange
@@ -99,7 +99,7 @@ namespace Features.Tests
         }
 
         [Fact(DisplayName = "Cliente Não Possui Nome Completo")]
-        [Trait("Categoria", "Cliente Bogus Tests")]
+        [Trait("01 - Testes de Unidade", "Cliente Bogus Tests")]
         public void Cliente_NomeCompleto_NaoDevePossuirNomeCompleto()
         {
             // Arrange

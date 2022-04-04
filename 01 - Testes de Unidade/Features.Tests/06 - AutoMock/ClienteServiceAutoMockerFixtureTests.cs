@@ -20,7 +20,7 @@ namespace Features.Tests
         }
 
         [Fact(DisplayName = "Adicionar Cliente com Sucesso")]
-        [Trait("Categoria", "Cliente Service AutoMock Fixture Tests")]
+        [Trait("01 - Testes de Unidade", "Cliente Service AutoMock Fixture Tests")]
         public void ClienteService_Adicionar_DeveExecutarComSucesso()
         {
             // Arrange
@@ -36,7 +36,7 @@ namespace Features.Tests
         }
 
         [Fact(DisplayName = "Adicionar Cliente com Falha")]
-        [Trait("Categoria", "Cliente Service AutoMock Fixture Tests")]
+        [Trait("01 - Testes de Unidade", "Cliente Service AutoMock Fixture Tests")]
         public void ClienteService_Adicionar_DeveFalharDevidoClienteInvalido()
         {
             // Arrange
@@ -52,7 +52,7 @@ namespace Features.Tests
         }
 
         [Fact(DisplayName = "Atualizar Cliente com Sucesso")]
-        [Trait("Categoria", "Cliente Service AutoMock Fixture Tests")]
+        [Trait("01 - Testes de Unidade", "Cliente Service AutoMock Fixture Tests")]
         public void ClienteService_Atualizar_DeveAtualizarComSucesso()
         {
             // Arrange
@@ -68,7 +68,7 @@ namespace Features.Tests
         }
 
         [Fact(DisplayName = "Atualizar Cliente com Falha")]
-        [Trait("Categoria", "Cliente Service AutoMock Fixture Tests")]
+        [Trait("01 - Testes de Unidade", "Cliente Service AutoMock Fixture Tests")]
         public void ClienteService_Atualizar_DeveAtualizarComFalha()
         {
             // Arrange
@@ -84,7 +84,7 @@ namespace Features.Tests
         }
 
         [Fact(DisplayName = "Inativar Cliente com Sucesso")]
-        [Trait("Categoria", "Cliente Service AutoMock Fixture Tests")]
+        [Trait("01 - Testes de Unidade", "Cliente Service AutoMock Fixture Tests")]
         public void ClienteService_Inativar_DeveInativarComSucesso()
         {
             // Arrange
@@ -101,7 +101,7 @@ namespace Features.Tests
         }
 
         [Fact(DisplayName = "Inativar Cliente com Falha")]
-        [Trait("Categoria", "Cliente Service AutoMock Fixture Tests")]
+        [Trait("01 - Testes de Unidade", "Cliente Service AutoMock Fixture Tests")]
         public void ClienteService_Inativar_DeveInativarComFalha()
         {
             // Arrange
@@ -118,7 +118,7 @@ namespace Features.Tests
         }
 
         [Fact(DisplayName = "Remover Cliente com Sucesso")]
-        [Trait("Categoria", "Cliente Service AutoMock Fixture Tests")]
+        [Trait("01 - Testes de Unidade", "Cliente Service AutoMock Fixture Tests")]
         public void ClienteService_Remover_DeveRemoverComSucesso()
         {
             // Arrange
@@ -133,7 +133,7 @@ namespace Features.Tests
         }
 
         [Fact(DisplayName = "Remover Cliente com Falha")]
-        [Trait("Categoria", "Cliente Service AutoMock Fixture Tests")]
+        [Trait("01 - Testes de Unidade", "Cliente Service AutoMock Fixture Tests")]
         public void ClienteService_Remover_DeveRemoverComFalha()
         {
             // Arrange
@@ -148,7 +148,7 @@ namespace Features.Tests
         }
 
         [Fact(DisplayName = "Obter Clientes Ativos")]
-        [Trait("Categoria", "Cliente Service AutoMock Fixture Tests")]
+        [Trait("01 - Testes de Unidade", "Cliente Service AutoMock Fixture Tests")]
         public void ClienteService_ObterTotosAtivos_DeveRetornarApenasClientesAtivos()
         {
             // Arrange

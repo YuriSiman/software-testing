@@ -11,7 +11,7 @@ namespace Features.Tests
         public static bool Teste4Chamado;
 
         [Fact(DisplayName = "Teste 04"), TestPriority(3)]
-        [Trait("Categoria", "Ordenacao Testes")]
+        [Trait("01 - Testes de Unidade", "Ordenacao Testes")]
         public void Teste04()
         {
             Teste4Chamado = true;
@@ -22,7 +22,7 @@ namespace Features.Tests
         }
 
         [Fact(DisplayName = "Teste 01"), TestPriority(2)]
-        [Trait("Categoria", "Ordenacao Testes")]
+        [Trait("01 - Testes de Unidade", "Ordenacao Testes")]
         public void Teste01()
         {
             Teste1Chamado = true;
@@ -33,7 +33,7 @@ namespace Features.Tests
         }
 
         [Fact(DisplayName = "Teste 03"), TestPriority(1)]
-        [Trait("Categoria", "Ordenacao Testes")]
+        [Trait("01 - Testes de Unidade", "Ordenacao Testes")]
         public void Teste03()
         {
             Teste3Chamado = true;
@@ -44,7 +44,7 @@ namespace Features.Tests
         }
 
         [Fact(DisplayName = "Teste 02"), TestPriority(4)]
-        [Trait("Categoria", "Ordenacao Testes")]
+        [Trait("01 - Testes de Unidade", "Ordenacao Testes")]
         public void Teste02()
         {
             Teste2Chamado = true;
