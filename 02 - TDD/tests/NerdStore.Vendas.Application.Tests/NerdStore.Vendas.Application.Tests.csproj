@@ -20,4 +20,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\NerdStore.Vendas.Application\NerdStore.Vendas.Application.csproj" />
+  </ItemGroup>
+
 </Project>
