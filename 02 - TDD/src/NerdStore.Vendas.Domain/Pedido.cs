@@ -1,10 +1,11 @@
 ﻿using FluentValidation.Results;
+using NerdStore.Core.DomainObjects;
 using NerdStore.Core.DomainObjects.Exceptions;
 using NerdStore.Vendas.Domain.Enums;
 
 namespace NerdStore.Vendas.Domain
 {
-    public class Pedido
+    public class Pedido : Entity, IAggregateRoot
     {
         public static int MAX_UNIDADES_ITEM => 15;
         public static int MIN_UNIDADES_ITEM => 1;
@@ -64,7 +65,7 @@ namespace NerdStore.Vendas.Domain
             CalcularValorTotalDesconto();
         }
 
-        private bool PedidoItemExistente(PedidoItem pedidoItem)
+        public bool PedidoItemExistente(PedidoItem pedidoItem)
         {
             return _pedidoItens.Any(p => p.ProdutoId == pedidoItem.ProdutoId);
         }
