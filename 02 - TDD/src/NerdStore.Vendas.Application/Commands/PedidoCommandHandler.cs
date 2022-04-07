@@ -20,7 +20,7 @@ namespace NerdStore.Vendas.Application.Commands
 
         public async Task<bool> Handle(AdicionarItemPedidoCommand message, CancellationToken cancellationToken)
         {
-            if (!ValidarComando(message)) return false;
+            if (!ValidarComando(message)) return false;   
 
             var pedido = await _pedidoRepository.ObterPedidoRascunhoPorClienteId(message.ClienteId);
             var pedidoItem = new PedidoItem(message.ProdutoId, message.Nome, message.Quantidade, message.ValorUnitario);
