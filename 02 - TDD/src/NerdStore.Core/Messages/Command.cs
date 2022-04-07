@@ -13,6 +13,9 @@ namespace NerdStore.Core.Messages
             TimeStamp = DateTime.Now;
         }
 
-        public abstract bool EhValido();
+        public virtual bool EhValido()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

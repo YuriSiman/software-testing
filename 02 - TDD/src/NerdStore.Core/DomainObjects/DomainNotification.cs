@@ -15,9 +15,9 @@ namespace NerdStore.Core.DomainObjects
         {
             Timestamp = DateTime.Now;
             DomainNotificationId = Guid.NewGuid();
+            Version = 1;
             Key = key;
             Value = value;
-            Version = 1;
         }
     }
 }
