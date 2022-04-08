@@ -8,12 +8,12 @@ using NerdStore.Catalogo.Application.Services;
 using NerdStore.Core.Messages.CommonMessages.Notifications;
 using NerdStore.Vendas.Application.Commands;
 using NerdStore.Vendas.Application.Queries;
-using NerdStore.WebApp.MVC.Models;
+using NerdStore.WebApi.Api.Models;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace NerdStore.WebApp.MVC.Controllers
+namespace NerdStore.WebApi.Api.Controllers
 {
     [Authorize]
     public class CarrinhoControllerApi : ControllerBase
