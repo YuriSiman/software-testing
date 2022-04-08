@@ -1,9 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using NerdStore.Vendas.Application.Queries;
-using System;
+﻿using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using NerdStore.Vendas.Application.Queries;
 
 namespace NerdStore.WebApp.MVC.Extensions
 {

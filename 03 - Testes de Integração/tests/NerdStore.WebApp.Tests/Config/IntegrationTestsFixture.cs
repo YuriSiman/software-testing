@@ -1,13 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc.Testing;
-using NerdStore.WebApp.Tests.Config;
 using System;
 using System.Net.Http;
 
 namespace NerdStore.WebApp.Tests.Config
 {
-    public class IntegrationTestsFixture<TStartup> : IDisposable where TStartup : class
+    public class IntegrationTestsFixture : IDisposable
     {
-        public readonly LojaAppFactory<TStartup> Factory;
+        public readonly LojaAppFactory Factory;
         public HttpClient Client;
 
         public IntegrationTestsFixture()
@@ -17,7 +16,7 @@ namespace NerdStore.WebApp.Tests.Config
 
             };
 
-            Factory = new LojaAppFactory<TStartup>();
+            Factory = new LojaAppFactory();
             Client = Factory.CreateClient(clientOptions);
         }
 

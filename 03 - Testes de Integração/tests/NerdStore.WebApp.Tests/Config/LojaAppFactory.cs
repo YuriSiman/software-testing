@@ -1,14 +1,38 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc.Testing;
+﻿using Microsoft.AspNetCore.Mvc.Testing;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using NerdStore.Catalogo.Data;
 
 namespace NerdStore.WebApp.Tests.Config
 {
-    public class LojaAppFactory<TStartup> : WebApplicationFactory<TStartup> where TStartup : class
+    public class LojaAppFactory : WebApplicationFactory<Program>
     {
-        protected override void ConfigureWebHost(IWebHostBuilder builder)
+        private readonly string _environment;
+
+        public LojaAppFactory(string environment = "Testing")
         {
-            builder.UseStartup<TStartup>();
-            builder.UseEnvironment("Testing");
+            _environment = environment;
+        }
+
+        protected override IHost CreateHost(IHostBuilder builder)
+        {
+            builder.UseEnvironment(_environment);
+
+            // Adicionando serviços de mock/test
+            //builder.ConfigureServices(services =>
+            //{
+            //    services.AddScoped(sp =>
+            //    {
+            //        // Replace SQLite with in-memory database for tests
+            //        return new DbContextOptionsBuilder<CatalogoContext>()
+            //        .UseInMemoryDatabase("Tests")
+            //        .UseApplicationServiceProvider(sp)
+            //        .Options;
+            //    });
+            //});
+
+            return base.CreateHost(builder);
         }
     }
 }

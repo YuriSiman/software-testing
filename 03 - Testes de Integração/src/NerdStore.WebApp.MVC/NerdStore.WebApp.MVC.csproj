@@ -2,24 +2,27 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <UserSecretsId>aspnet-NerdStore.WebApp.MVC-63E29EEE-C58E-4988-B401-783D2279DA1B</UserSecretsId>
-    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-NerdStore.WebApp.MVC-06C3D7D7-3898-4C25-AFAF-2D5BAC36D475</UserSecretsId>
   </PropertyGroup>
 
+	<ItemGroup>
+		<InternalsVisibleTo Include="NerdStore.WebApp.Tests" />
+	</ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.3" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.2" />
-    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.3.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.3.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
-
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\02 - TDD\src\NerdStore.Core\NerdStore.Core.csproj" />

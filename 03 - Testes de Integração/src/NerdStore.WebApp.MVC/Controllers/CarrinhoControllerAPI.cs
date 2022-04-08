@@ -1,6 +1,5 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -10,11 +9,9 @@ using NerdStore.Core.Messages.CommonMessages.Notifications;
 using NerdStore.Vendas.Application.Commands;
 using NerdStore.Vendas.Application.Queries;
 using NerdStore.WebApp.MVC.Models;
-using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace NerdStore.WebApp.MVC.Controllers
 {

@@ -1,9 +1,11 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
+#nullable disable
+
 namespace NerdStore.Catalogo.Data.Migrations
 {
-    public partial class Initial : Migration
+    public partial class InitialCatalogoMigration : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,9 +13,9 @@ namespace NerdStore.Catalogo.Data.Migrations
                 name: "Categorias",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Nome = table.Column<string>(type: "varchar(250)", nullable: false),
-                    Codigo = table.Column<int>(nullable: false)
+                    Codigo = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -24,15 +26,15 @@ namespace NerdStore.Catalogo.Data.Migrations
                 name: "Produtos",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false),
-                    CategoriaId = table.Column<Guid>(nullable: false),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CategoriaId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Nome = table.Column<string>(type: "varchar(250)", nullable: false),
                     Descricao = table.Column<string>(type: "varchar(500)", nullable: false),
-                    Ativo = table.Column<bool>(nullable: false),
-                    Valor = table.Column<decimal>(nullable: false),
-                    DataCadastro = table.Column<DateTime>(nullable: false),
+                    Ativo = table.Column<bool>(type: "bit", nullable: false),
+                    Valor = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
+                    DataCadastro = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Imagem = table.Column<string>(type: "varchar(250)", nullable: false),
-                    QuantidadeEstoque = table.Column<int>(nullable: false),
+                    QuantidadeEstoque = table.Column<int>(type: "int", nullable: false),
                     Altura = table.Column<int>(type: "int", nullable: false),
                     Largura = table.Column<int>(type: "int", nullable: false),
                     Profundidade = table.Column<int>(type: "int", nullable: false)

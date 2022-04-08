@@ -1,13 +1,10 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NerdStore.Catalogo.Application.Services;
 using NerdStore.Core.Messages.CommonMessages.Notifications;
 using NerdStore.Vendas.Application.Commands;
 using NerdStore.Vendas.Application.Queries;
-using System;
-using System.Threading.Tasks;
 
 namespace NerdStore.WebApp.MVC.Controllers
 {

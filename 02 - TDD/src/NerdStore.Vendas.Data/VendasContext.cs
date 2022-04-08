@@ -2,7 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using NerdStore.Core.Data;
 using NerdStore.Core.Messages;
-using NerdStore.Vendas.Data.Extensions;
 using NerdStore.Vendas.Domain;
 
 namespace NerdStore.Vendas.Data

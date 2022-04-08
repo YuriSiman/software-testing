@@ -1,5 +1,4 @@
 ﻿using MediatR;
-using Microsoft.Extensions.DependencyInjection;
 using NerdStore.Catalogo.Application.Services;
 using NerdStore.Catalogo.Data;
 using NerdStore.Catalogo.Data.Repository;
@@ -25,7 +24,6 @@ namespace NerdStore.WebApp.MVC.Setup
             services.AddScoped<IProdutoAppService, ProdutoAppService>();
             services.AddScoped<IEstoqueService, EstoqueService>();
             services.AddScoped<CatalogoContext>();
-
             
             // Vendas
             services.AddScoped<IPedidoRepository, PedidoRepository>();

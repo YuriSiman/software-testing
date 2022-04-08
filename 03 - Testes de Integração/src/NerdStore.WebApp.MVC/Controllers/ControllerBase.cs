@@ -1,10 +1,6 @@
 ﻿using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NerdStore.Core.Messages.CommonMessages.Notifications;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
 
 namespace NerdStore.WebApp.MVC.Controllers

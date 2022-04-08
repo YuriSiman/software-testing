@@ -1,7 +1,7 @@
 ﻿using MediatR;
 using NerdStore.Core.DomainObjects;
 
-namespace NerdStore.Vendas.Data.Extensions
+namespace NerdStore.Vendas.Data
 {
     public static class MediatorExtension
     {
@@ -19,9 +19,8 @@ namespace NerdStore.Vendas.Data.Extensions
                 .ForEach(entity => entity.Entity.LimparEventos());
 
             var tasks = domainEvents
-                .Select(async (domainEvents) =>
-                {
-                    await mediator.Publish(domainEvents);
+                .Select(async (domainEvent) => {
+                    await mediator.Publish(domainEvent);
                 });
 
             await Task.WhenAll(tasks);
