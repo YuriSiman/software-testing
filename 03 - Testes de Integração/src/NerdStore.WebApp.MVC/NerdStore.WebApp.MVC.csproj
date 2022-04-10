@@ -25,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\01 - Testes de Unidade\Features.Tests\Features.Tests.csproj" />
     <ProjectReference Include="..\..\..\02 - TDD\src\NerdStore.Core\NerdStore.Core.csproj" />
     <ProjectReference Include="..\..\..\02 - TDD\src\NerdStore.Vendas.Application\NerdStore.Vendas.Application.csproj" />
     <ProjectReference Include="..\..\..\02 - TDD\src\NerdStore.Vendas.Data\NerdStore.Vendas.Data.csproj" />
