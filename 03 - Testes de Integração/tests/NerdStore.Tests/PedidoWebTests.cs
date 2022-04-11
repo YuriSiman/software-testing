@@ -10,11 +10,11 @@ using Xunit;
 namespace NerdStore.WebApp.Tests
 {
     [Collection(nameof(IntegrationWebTestsFixtureCollection))]
-    public class PedidoTests
+    public class PedidoWebTests
     {
         private readonly IntegrationTestsFixture _testsFixture;
 
-        public PedidoTests(IntegrationTestsFixture testsFixture)
+        public PedidoWebTests(IntegrationTestsFixture testsFixture)
         {
             _testsFixture = testsFixture;
         }

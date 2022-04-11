@@ -9,11 +9,11 @@ namespace NerdStore.WebApp.Tests
 {
     [TestCaseOrderer("Features.Tests.PriorityOrderer", "Features.Tests")]
     [Collection(nameof(IntegrationWebTestsFixtureCollection))]
-    public class UsuarioTests
+    public class UsuarioWebTests
     {
         private readonly IntegrationTestsFixture _testsFixture;
 
-        public UsuarioTests(IntegrationTestsFixture testsFixture)
+        public UsuarioWebTests(IntegrationTestsFixture testsFixture)
         {
             _testsFixture = testsFixture;
         }

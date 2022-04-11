@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\01 - Testes de Unidade\Features.Tests\Features.Tests.csproj" />
+    <ProjectReference Include="..\..\src\NerdStore.WebApi.Api\NerdStore.WebApi.Api.csproj" />
     <ProjectReference Include="..\..\src\NerdStore.WebApp.MVC\NerdStore.WebApp.MVC.csproj" />
   </ItemGroup>
 

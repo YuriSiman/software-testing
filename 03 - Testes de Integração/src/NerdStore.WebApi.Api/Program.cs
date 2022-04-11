@@ -1,5 +1,6 @@
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using NerdStore.Catalogo.Application.AutoMapper;
@@ -7,6 +8,7 @@ using NerdStore.Catalogo.Data;
 using NerdStore.Vendas.Data;
 using NerdStore.WebApi.Api.Models;
 using NerdStore.WebApi.Api.Setup;
+using NerdStore.WebApp.MVC.Data;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,11 +23,19 @@ builder.Configuration
 // Services
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(connectionString));
+
 builder.Services.AddDbContext<CatalogoContext>(options =>
     options.UseSqlServer(connectionString));
 
 builder.Services.AddDbContext<VendasContext>(options =>
     options.UseSqlServer(connectionString));
+
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+    .AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
 
 // JWT
 var appSettingsSection = builder.Configuration.GetSection("AppSettings");
